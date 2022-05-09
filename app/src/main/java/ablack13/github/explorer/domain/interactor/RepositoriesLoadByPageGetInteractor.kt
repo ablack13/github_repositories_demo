@@ -7,10 +7,12 @@ class RepositoriesLoadByPageGetInteractor(private val repoRepository: RepoReposi
 
     suspend fun exec(
         query: String,
-        page: Int
+        page: Int,
+        count: Int
     ): Result<List<RepositoryModel>> =
         repoRepository.getRemoteRepositoriesByPage(
             query = query,
-            page = page
+            page = page,
+            count = count
         )
 }

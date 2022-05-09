@@ -3,7 +3,7 @@ package ablack13.github.explorer.data.mapper
 import ablack13.github.explorer.data.net.dto.SearchRepositoriesResponse
 import ablack13.github.explorer.domain.model.RepositoryModel
 
-class RepositoryModelMapper {
+internal class RepositoryModelMapper {
     fun fromDto(dto: SearchRepositoriesResponse.Item): RepositoryModel =
         RepositoryModel(
             owner = dto.owner.login,

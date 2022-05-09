@@ -6,6 +6,9 @@ import org.koin.core.module.Module
 
 internal fun Module.repositories() {
     factory<RepoRepository> {
-        RepoRepositoryImpl(repositoryDataSource = get())
+        RepoRepositoryImpl(
+            webService = get(),
+            repositoryModelMapper = get()
+        )
     }
 }
