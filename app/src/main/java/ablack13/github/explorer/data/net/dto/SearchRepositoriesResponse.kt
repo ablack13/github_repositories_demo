@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class SearchRepositoriesResponse(
+internal data class SearchRepositoriesResponse(
     @SerialName("incomplete_results")
     val incompleteResults: Boolean,
     @SerialName("items")

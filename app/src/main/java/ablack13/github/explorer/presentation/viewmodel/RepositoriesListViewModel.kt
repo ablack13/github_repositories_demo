@@ -32,7 +32,8 @@ class RepositoriesListViewModel(
             updateState { copy(progress = ProgressUi.LOADING) }
             repositoriesLoadByPageGetInteractor.exec(
                 query = getState().searchQuery,
-                page = getState().page + 1
+                page = getState().page + 1,
+                count = 10
             )
                 .map { it.map { model -> repositoryUiMapper.fromModel(model = model) } }
                 .onSuccess {
