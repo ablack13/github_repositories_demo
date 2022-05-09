@@ -6,7 +6,7 @@ import org.koin.core.KoinApplication
 import org.koin.core.context.startKoin
 import org.koin.core.module.Module
 
-object DiProvider {
+object DIProvider {
     //this instance can be used for manually load/unload modules after engine init
     private lateinit var koinApp: KoinApplication
 
